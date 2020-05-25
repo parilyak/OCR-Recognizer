@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		36BE949C247C42B500344017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BE949A247C42B500344017 /* Main.storyboard */; };
 		36BE949E247C42BA00344017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BE949D247C42BA00344017 /* Assets.xcassets */; };
 		36BE94A1247C42BA00344017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BE949F247C42BA00344017 /* LaunchScreen.storyboard */; };
+		36BE94A9247C42D400344017 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 36BE94A8247C42D300344017 /* tessdata */; };
+		B48111285F8802B019B1FEFC /* Pods_OCR_Recognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3299EF61F72A86DCBCA51C8D /* Pods_OCR_Recognizer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3299EF61F72A86DCBCA51C8D /* Pods_OCR_Recognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCR_Recognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BE9491247C42B500344017 /* OCR Recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR Recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BE9494247C42B500344017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BE9496247C42B500344017 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		36BE949D247C42BA00344017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36BE94A0247C42BA00344017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36BE94A2247C42BA00344017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36BE94A8247C42D300344017 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		E0FEEB92B54CB716BBFAA6E8 /* Pods-OCR Recognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCR Recognizer.debug.xcconfig"; path = "Target Support Files/Pods-OCR Recognizer/Pods-OCR Recognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		E59BA26E101AAEA6AD3C1B34 /* Pods-OCR Recognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCR Recognizer.release.xcconfig"; path = "Target Support Files/Pods-OCR Recognizer/Pods-OCR Recognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48111285F8802B019B1FEFC /* Pods_OCR_Recognizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				36BE9493247C42B500344017 /* OCR Recognizer */,
 				36BE9492247C42B500344017 /* Products */,
+				CED8D146DD0B341D3B944CE7 /* Pods */,
+				D784392CADBA5A628876483C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +69,29 @@
 				36BE9496247C42B500344017 /* SceneDelegate.swift */,
 				36BE9498247C42B500344017 /* ViewController.swift */,
 				36BE949A247C42B500344017 /* Main.storyboard */,
+				36BE94A8247C42D300344017 /* tessdata */,
 				36BE949D247C42BA00344017 /* Assets.xcassets */,
 				36BE949F247C42BA00344017 /* LaunchScreen.storyboard */,
 				36BE94A2247C42BA00344017 /* Info.plist */,
 			);
 			path = "OCR Recognizer";
+			sourceTree = "<group>";
+		};
+		CED8D146DD0B341D3B944CE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0FEEB92B54CB716BBFAA6E8 /* Pods-OCR Recognizer.debug.xcconfig */,
+				E59BA26E101AAEA6AD3C1B34 /* Pods-OCR Recognizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D784392CADBA5A628876483C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3299EF61F72A86DCBCA51C8D /* Pods_OCR_Recognizer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36BE94A5247C42BA00344017 /* Build configuration list for PBXNativeTarget "OCR Recognizer" */;
 			buildPhases = (
+				EAD5E8145B7D633DE85568A4 /* [CP] Check Pods Manifest.lock */,
 				36BE948D247C42B500344017 /* Sources */,
 				36BE948E247C42B500344017 /* Frameworks */,
 				36BE948F247C42B500344017 /* Resources */,
+				2EA94DF2F82D9A895AE520DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BE94A1247C42BA00344017 /* LaunchScreen.storyboard in Resources */,
+				36BE94A9247C42D400344017 /* tessdata in Resources */,
 				36BE949E247C42BA00344017 /* Assets.xcassets in Resources */,
 				36BE949C247C42B500344017 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EA94DF2F82D9A895AE520DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCR Recognizer/Pods-OCR Recognizer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCR Recognizer/Pods-OCR Recognizer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCR Recognizer/Pods-OCR Recognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD5E8145B7D633DE85568A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCR Recognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36BE948D247C42B500344017 /* Sources */ = {
@@ -216,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +354,7 @@
 		};
 		36BE94A6247C42BA00344017 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0FEEB92B54CB716BBFAA6E8 /* Pods-OCR Recognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		36BE94A7247C42BA00344017 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59BA26E101AAEA6AD3C1B34 /* Pods-OCR Recognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
