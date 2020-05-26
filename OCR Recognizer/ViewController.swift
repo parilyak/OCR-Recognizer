@@ -13,7 +13,6 @@ import GPUImage
 
 class ViewController: UIViewController {
   @IBOutlet weak var textView: UITextView!
-  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,41 +25,40 @@ class ViewController: UIViewController {
   
   @IBAction func takePhoto(_ sender: Any) {
     let imagePickerActionSheet =
-      UIAlertController(title: "Snap/Upload Image",
+      UIAlertController(title: "Зняти/Обрати фото",
                         message: nil,
                         preferredStyle: .actionSheet)
     
     if UIImagePickerController.isSourceTypeAvailable(.camera) {
       let cameraButton = UIAlertAction(
-        title: "Take Photo",
+        title: "Зробити Фото",
         style: .default) { (alert) -> Void in
-          self.activityIndicator.startAnimating()
           let imagePicker = UIImagePickerController()
           imagePicker.delegate = self
           imagePicker.sourceType = .camera
           imagePicker.mediaTypes = [kUTTypeImage as String]
           self.present(imagePicker, animated: true, completion: {
-            self.activityIndicator.stopAnimating()
+    
           })
       }
       imagePickerActionSheet.addAction(cameraButton)
     }
     
     let libraryButton = UIAlertAction(
-      title: "Choose Existing",
+      title: "Обрати Фото",
       style: .default) { (alert) -> Void in
-        self.activityIndicator.startAnimating()
+      
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = [kUTTypeImage as String]
         self.present(imagePicker, animated: true, completion: {
-          self.activityIndicator.stopAnimating()
+      
         })
     }
     imagePickerActionSheet.addAction(libraryButton)
     
-    let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+    let cancelButton = UIAlertAction(title: "Відмінити", style: .cancel)
     imagePickerActionSheet.addAction(cancelButton)
     
     present(imagePickerActionSheet, animated: true)
@@ -79,7 +77,7 @@ class ViewController: UIViewController {
       tesseract.recognize()
       textView.text = tesseract.recognizedText
     }
-    activityIndicator.stopAnimating()
+   
   }
 }
 
@@ -89,14 +87,15 @@ extension ViewController: UINavigationControllerDelegate {
 
 // MARK: - UIImagePickerControllerDelegate
 extension ViewController: UIImagePickerControllerDelegate {
-  func imagePickerController(_ picker: UIImagePickerController,
+ 
+    @objc func imagePickerController(_ picker: UIImagePickerController,
        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     guard let selectedPhoto =
       info[.originalImage] as? UIImage else {
         dismiss(animated: true)
         return
     }
-    activityIndicator.startAnimating()
+  
     dismiss(animated: true) {
       self.performImageRecognition(selectedPhoto)
     }

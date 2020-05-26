@@ -19,30 +19,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-n6-gfa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap/upload a clear picture of your poem then edit below. Tap outside of the text box once your sweet nothings are complete." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x98-hy-2W4">
-                                        <rect key="frame" x="19" y="52" width="371" height="110"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сфотографуй або завантаж чітку картинку тексту, а потім відредагуй нижче. Натисни поза текстовим полем." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x98-hy-2W4">
+                                        <rect key="frame" x="19" y="52" width="371" height="118"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="3LA-3p-a5m"/>
+                                            <constraint firstAttribute="height" constant="118" id="3LA-3p-a5m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cb4-dE-Ukd">
-                                        <rect key="frame" x="19" y="170" width="371" height="190"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cb4-dE-Ukd">
+                                        <rect key="frame" x="19" y="187" width="371" height="173"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.93333333330000001" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="190" id="5zP-bv-19U"/>
+                                            <constraint firstAttribute="height" constant="173" id="5zP-bv-19U"/>
                                             <constraint firstAttribute="width" constant="371" id="FYl-dv-kVb"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPh-qU-8nc">
-                                        <rect key="frame" x="184" y="368" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="137" y="368" width="140" height="30"/>
+                                        <state key="normal" title="Зняти/Обрати фото"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T55-Bb-XpG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -52,7 +54,7 @@
                                     <constraint firstItem="pPh-qU-8nc" firstAttribute="top" secondItem="Cb4-dE-Ukd" secondAttribute="bottom" constant="8" symbolic="YES" id="LD9-91-w9v"/>
                                     <constraint firstItem="x98-hy-2W4" firstAttribute="leading" secondItem="qXL-n6-gfa" secondAttribute="leading" constant="19" id="R9J-SI-BFn"/>
                                     <constraint firstAttribute="trailing" secondItem="Cb4-dE-Ukd" secondAttribute="trailing" constant="24" id="bsz-Py-wh0"/>
-                                    <constraint firstItem="Cb4-dE-Ukd" firstAttribute="top" secondItem="x98-hy-2W4" secondAttribute="bottom" constant="8" id="bzd-Vq-l5Q"/>
+                                    <constraint firstItem="Cb4-dE-Ukd" firstAttribute="top" secondItem="x98-hy-2W4" secondAttribute="bottom" constant="17" id="bzd-Vq-l5Q"/>
                                     <constraint firstItem="x98-hy-2W4" firstAttribute="top" secondItem="qXL-n6-gfa" secondAttribute="top" constant="52" id="lQj-XZ-fWh"/>
                                     <constraint firstItem="pPh-qU-8nc" firstAttribute="centerX" secondItem="qXL-n6-gfa" secondAttribute="centerX" id="v7U-Qv-247"/>
                                 </constraints>
@@ -66,9 +68,20 @@
                             <constraint firstAttribute="bottom" secondItem="qXL-n6-gfa" secondAttribute="bottom" id="fgH-rY-c1y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="H2C-UD-p08" appends="YES" id="05j-Sr-Xdn"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Cb4-dE-Ukd" id="B5S-Qb-Y3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="H2C-UD-p08">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="BYZ-38-t0r" id="Tko-Hj-WBk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
