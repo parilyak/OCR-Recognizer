@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36BE948C247C42B500344017 /* Build configuration list for PBXProject "OCR Recognizer" */;
+			buildConfigurationList = 36BE948C247C42B500344017 /* Build configuration list for PBXProject "OCR" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -393,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36BE948C247C42B500344017 /* Build configuration list for PBXProject "OCR Recognizer" */ = {
+		36BE948C247C42B500344017 /* Build configuration list for PBXProject "OCR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36BE94A3247C42BA00344017 /* Debug */,

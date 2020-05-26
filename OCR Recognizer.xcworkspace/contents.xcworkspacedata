@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:OCR Recognizer.xcodeproj">
+      location = "group:/Users/lipa/Desktop/Swift/OCR Recognizer/OCR.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
