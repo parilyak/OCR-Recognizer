@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,10 +20,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap/upload a clear picture of your poem then edit below. Tap outside of the text box once your sweet nothings are complete." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x98-hy-2W4">
-                                        <rect key="frame" x="19" y="70" width="371" height="81"/>
+                                        <rect key="frame" x="19" y="52" width="371" height="110"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="81" id="3LA-3p-a5m"/>
-                                            <constraint firstAttribute="width" constant="371" id="NFZ-P2-PhK"/>
+                                            <constraint firstAttribute="height" constant="110" id="3LA-3p-a5m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="190" id="5zP-bv-19U"/>
                                             <constraint firstAttribute="width" constant="371" id="FYl-dv-kVb"/>
                                         </constraints>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -52,8 +52,8 @@
                                     <constraint firstItem="pPh-qU-8nc" firstAttribute="top" secondItem="Cb4-dE-Ukd" secondAttribute="bottom" constant="8" symbolic="YES" id="LD9-91-w9v"/>
                                     <constraint firstItem="x98-hy-2W4" firstAttribute="leading" secondItem="qXL-n6-gfa" secondAttribute="leading" constant="19" id="R9J-SI-BFn"/>
                                     <constraint firstAttribute="trailing" secondItem="Cb4-dE-Ukd" secondAttribute="trailing" constant="24" id="bsz-Py-wh0"/>
-                                    <constraint firstItem="Cb4-dE-Ukd" firstAttribute="top" secondItem="x98-hy-2W4" secondAttribute="bottom" constant="19" id="bzd-Vq-l5Q"/>
-                                    <constraint firstItem="x98-hy-2W4" firstAttribute="top" secondItem="qXL-n6-gfa" secondAttribute="top" constant="70" id="lQj-XZ-fWh"/>
+                                    <constraint firstItem="Cb4-dE-Ukd" firstAttribute="top" secondItem="x98-hy-2W4" secondAttribute="bottom" constant="8" id="bzd-Vq-l5Q"/>
+                                    <constraint firstItem="x98-hy-2W4" firstAttribute="top" secondItem="qXL-n6-gfa" secondAttribute="top" constant="52" id="lQj-XZ-fWh"/>
                                     <constraint firstItem="pPh-qU-8nc" firstAttribute="centerX" secondItem="qXL-n6-gfa" secondAttribute="centerX" id="v7U-Qv-247"/>
                                 </constraints>
                             </view>
